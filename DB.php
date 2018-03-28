@@ -912,7 +912,7 @@ class DB
               $dsnArray['port'],
               $dsnArray['database']
         );
-        if (count($dsnArray) > 0) {
+        if ((bool)$dsnArray) {
             $dsnString .= '?';
             $i = 0;
             foreach ($dsnArray as $key => $value) {
